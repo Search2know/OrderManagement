@@ -26,14 +26,16 @@ namespace OrderManagement.Services
                     }
                     else
                     {
-                        errorMessages.Add(ErrorFormatter.FormatError("Проверка продукта", $"Ошибка в элементе заказа '{item.ProductId}:{item.Quantity}': Товар {item.ProductId} не найден"));
+                        errorMessages.Add(ErrorFormatter.FormatError("Проверка продукта",
+                            $"Ошибка в элементе заказа '{item.ProductId}:{item.Quantity}': Товар {item.ProductId} не найден"));
                         hasInvalidItem = true;
                     }
                 }
 
                 if (hasInvalidItem)
                 {
-                    errorMessages.Add(ErrorFormatter.FormatError("Невалидный заказ", $"Заказ {order.Id} содержит невалидные товары, заказ пропущен"));
+                    errorMessages.Add(ErrorFormatter.FormatError("Невалидный заказ",
+                        $"Заказ {order.Id} содержит невалидные товары, заказ пропущен"));
                     continue;
                 }
 

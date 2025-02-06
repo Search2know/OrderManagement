@@ -22,20 +22,24 @@ namespace OrderManagement.Services
 
                 var parts = line.Split(';');
                 if (parts.Length != 3)
-                    throw new FormatException(ErrorFormatter.FormatError("Формат строки", $"Неверный формат строки: {line}"));
-                
+                    throw new FormatException(ErrorFormatter.FormatError("Формат строки",
+                        $"Неверный формат строки: {line}"));
+
                 if (!int.TryParse(parts[0], out int id))
-                    throw new FormatException(ErrorFormatter.FormatError("Парсинг Id", $"Ошибка при парсинге Id в строке: {line}"));
+                    throw new FormatException(ErrorFormatter.FormatError("Парсинг Id",
+                        $"Ошибка при парсинге Id в строке: {line}"));
 
                 string name = parts[1];
 
                 if (!decimal.TryParse(parts[2], NumberStyles.Any, CultureInfo.InvariantCulture, out decimal price))
-                    throw new FormatException(ErrorFormatter.FormatError("Парсинг цены", $"Ошибка при парсинге цены в строке: {line}"));
+                    throw new FormatException(ErrorFormatter.FormatError("Парсинг цены",
+                        $"Ошибка при парсинге цены в строке: {line}"));
 
                 if (!products.ContainsKey(id))
                     products.Add(id, new Product { Id = id, Name = name, Price = price });
                 else
-                    throw new Exception(ErrorFormatter.FormatError("Дублирование товара", $"Дублирование товара с Id {id}."));
+                    throw new Exception(ErrorFormatter.FormatError("Дублирование товара",
+                        $"Дублирование товара с Id {id}."));
             }
 
             return products;

@@ -5,21 +5,21 @@ using OrderManagement.Models;
 
 namespace OrderManagement.Services
 {
-      public class ReportGenerator
+    public class ReportGenerator
     {
         private readonly string _outputDirectory;
 
- 
+
         public ReportGenerator(string outputDirectory)
         {
             _outputDirectory = outputDirectory;
-            
+
             if (!Directory.Exists(_outputDirectory))
             {
                 Directory.CreateDirectory(_outputDirectory);
             }
         }
-        
+
         public void GenerateReport(List<Order> orders, string reportFileName)
         {
             int totalOrders = orders.Count;
@@ -36,7 +36,7 @@ namespace OrderManagement.Services
             {
                 reportLines.Add($"Самый дорогой заказ: №{maxOrder.Id} ({maxOrder.TotalPrice} руб.)");
             }
-            
+
             string fullPath = Path.Combine(_outputDirectory, reportFileName);
             File.WriteAllLines(fullPath, reportLines);
         }
