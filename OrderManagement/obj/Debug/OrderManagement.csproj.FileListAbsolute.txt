@@ -1,0 +1,8 @@
+C:\Users\Kirill\RiderProjects\OrderManagment\OrderManagement\bin\Debug\OrderManagement.exe
+C:\Users\Kirill\RiderProjects\OrderManagment\OrderManagement\bin\Debug\OrderManagement.pdb
+C:\Users\Kirill\RiderProjects\OrderManagment\OrderManagement\obj\Debug\OrderManagement.csproj.AssemblyReference.cache
+C:\Users\Kirill\RiderProjects\OrderManagment\OrderManagement\obj\Debug\OrderManagement.csproj.CoreCompileInputs.cache
+C:\Users\Kirill\RiderProjects\OrderManagment\OrderManagement\obj\Debug\OrderManagement.exe
+C:\Users\Kirill\RiderProjects\OrderManagment\OrderManagement\obj\Debug\OrderManagement.pdb
+C:\Users\Kirill\RiderProjects\OrderManagment\OrderManagement\bin\Debug\Data\orders.csv
+C:\Users\Kirill\RiderProjects\OrderManagment\OrderManagement\bin\Debug\Data\products.csv
